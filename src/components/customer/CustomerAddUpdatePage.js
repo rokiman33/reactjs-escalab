@@ -110,7 +110,7 @@ const CustomerAddUpdatePage = (props)=>{
         setAlertstate({ ...alertState, open: false });
       };
     return(
-        <PageTemplate title="Add/Update Customer">
+        <PageTemplate title="Agrega o Modificar Cliente">
             <Card>
             <CardContent>
                 <form onSubmit={handleSubmit} noValidate autoComplete="off">
@@ -292,14 +292,23 @@ defaultValue ={customer.CustValueAdic3}
 error ={(errorMessages.CustValueAdic3)?true:false}
 label ={"CustValueAdic3"}/>
 </ Grid >
+<Grid xs={12} md={6} key={"19"} item>
+<TextField  autoFocus fullWidth
+helperText ={errorMessages.CustomerId}
+type ={"number"}
+onChange={(e)=>{setCustomer({...customer,CustomerId:e.target.value});checkErrors()}}
+defaultValue ={customer.CustomerId}
+error ={(errorMessages.CustomerId)?true:false}
+label ={"ID Cliente"}/>
+</ Grid >
 <Grid xs={12}  md={6} item key={"19"}>
 <Grid container justify={"flex-end"} alignContent={"flex-end"}>
-<Button onClick={() => history.push('/customer')} variant={"contained"} type={"Button"} color="secondary">Cancel</Button>
+<Button onClick={() => history.push('/customer')} variant={"contained"} type={"Button"} color="secondary">Cancelar</Button>
 </Grid>
 </Grid>
 <Grid xs={12}  md={6} item key={"20"}>
 <Grid container justify={"flex-end"} alignContent={"flex-end"}>
-<Button variant={"contained"} color="primary"  type={"Sumbit"}>Save</Button>
+<Button variant={"contained"} color="primary"  type={"Sumbit"}>Grabar</Button>
 </Grid>
 </Grid>
 
