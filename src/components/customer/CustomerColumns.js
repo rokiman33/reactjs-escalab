@@ -4,7 +4,7 @@ import Avatar from 'react-avatar';
 import Input from "@material-ui/core/Input";
 
 const GetCustomerColumns = (totalCount) => [
-  {title: "ID Unico", field: "CustomerId",hidden:true},
+  {title: "ID Unico", field: "CustomerId",hidden:false},
 
   {title: "Nombre de Cliente", field: "CustName"},
 {title: "RUT", field: "CustIdentity"},
